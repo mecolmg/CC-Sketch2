@@ -1,0 +1,603 @@
+<tw-storydata name="sketch 2" startnode="1" creator="Twine" creator-version="2.2.1" ifid="78955A23-847D-4285-99B4-DF1C560192DD" zoom="1" format="Harlowe" format-version="1.2.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Start" tags="" position="0,0" size="100,100">Welcome to the U.S.S. Tempest, a patrol ship in quadrant ILJN-243 of Andromeda space. You are the CHIEF SECURITY OFFICER on board this vessel, and today really isn&#39;t your day. 
+
+As it turns out, sometime while you were sleeping, your CAPTAIN was MURDERED.
+
+And since you are the CHIEF SECURITY OFFICER, it&#39;s your job to figure it out.
+
+[[Let&#39;s Check Out this Spaceship, dude.]] 
+
+(set: $laser = false)
+(set: $stab = false)
+(set: $poison = false)</tw-passagedata><tw-passagedata pid="2" name="Let&#39;s Meet the Crew" tags="" position="300,0" size="100,100">Boy, there sure are a lot of people on this ship! And any of them could be a suspect, right?
+
+Well no, the high-ranking officers are the only ones that have access to the officer quarters, which is where the CAPTAIN was murdered.
+
+So it&#39;s like, 5 people, and they are all on the BRIDGE right now, which is SUPER CONVIENENT, almost like you deliberately called them there for questioning or something.
+
+[[FIRST OFFICER]]
+[[NAVIGATOR]]
+[[TRANSLATOR]]
+[[SCIENCE OFFICER]]
+[[ENGINEER]]
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]]</tw-passagedata><tw-passagedata pid="3" name="Let&#39;s Check Out this Spaceship, dude." tags="" position="4,124" size="100,100">The U.S.S. Tempest is a Miranda class starship, which means it is BIG. It would take SO LONG to describe every area of this ship, but LUCKY FOR YOU, you only have to worry about the officer area, because that&#39;s where the CAPTAIN was KILLED. The body was found in the CAPTAIN&#39;S QUARTERS, which is in the BUNKS.
+
+[[Investigate Bridge|Bridge]] 
+
+[[Investigate Common Room|Common Area]]
+
+[[Investigate Lab|Lab]]
+
+[[Investigate Gym|Gym]]
+
+[[Investigate Bunks|BUNKS]]
+
+[[Investigate Engine Room|Engine Room]]</tw-passagedata><tw-passagedata pid="4" name="Bridge" tags="" position="130,33" size="100,100">The main area where all your fellow officers are waiting is the BRIDGE. The BRIDGE is where you all sit around and make the ship GO. Or more accurately, it&#39;s where you tell the lower ranking crew members to do a lot of very complicated mechanical stuff that makes the ship GO.
+
+{ (if: $stab is true)[You also know that this is where the CAPTAIN spend most of their time. This is as good a place as any to be the CRIME SCENE.
+
+[[INVESTIGATE BRIDGE]] ]}
+
+[[Talk to the CREW|Let&#39;s Meet the Crew]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]]
+
+
+</tw-passagedata><tw-passagedata pid="5" name="Common Area" tags="" position="7,296" size="100,100">The next area is the COMMON ROOM. It is a room where the officers get to HANG OUT when you aren&#39;t making the ship GO. There&#39;s a lot of nice in here, like COUCHES and SNACKS.
+
+The TRANSLATOR likes to hang out here when they aren&#39;t getting yelled at by aliens and/or yelled at by humans in other languages
+
+[[INVESTIGATE COMMON ROOM]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="6" name="Gym" tags="" position="206,432" size="100,100">There&#39;s also a GYM, where the officers exercise to stay in TIP TOP SHAPE so they can FIGHT AND/OR SMOOCH ALIENS as best they can. You are in here a lot, because you are the CHIEF SECURITY OFFICER and FIGHTING ALIENS is kind of YOUR THING.
+
+You think about it a little, and you see the FIRST OFFICER here more than anyone else.
+
+[[INVESTIGATE GYM]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="7" name="Lab" tags="" position="147,297" size="100,100">The LAB really ISN&#39;T YOUR THING. This is where your CHIEF SCIENCE OFFICER does COOL SCIENCE STUFF. You don&#39;t really understand a lot of that COOL SCIENCE STUFF, but hey, as long as no one is blinded by science or anything, they can keep on keeping on.
+
+[[INVESTIGATE LAB]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="8" name="BUNKS" tags="" position="16,861" size="100,100">A standard are on all starships is the BUNK AREA, which is where the officers SLEEP. And lucky for you, officers get their own PRIVATE ROOMS. Not so lucky, however, is the fact that this is where the CAPTAIN was JUST ANNIHILATED.
+
+At least they had the comfort of their own room while they were dying?
+
+(if: $stab is not true and $poison is not true and $laser is not true)[ [[Well, might as well look at that DEAD BODY|Examine Body]] ]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="9" name="Examine Body" tags="" position="23,991" size="100,100">Oh my god this dude is SO DEAD. You are a PROFESSIONAL, but man, it is pretty rough looking at the dead body of your CAPTAIN. As a PROFESSIONAL, however, you can totally tell HOW THIS DUDE DIED just by EXAMINING THE BODY, and the CAPTAIN ultimately succumbed to:
+
+[[STABBING]]
+
+[[POISONING]]
+
+[[GETTING SHOT IN THE FACE WITH A LASER]]</tw-passagedata><tw-passagedata pid="10" name="STABBING" tags="" position="150,960" size="100,100">Using your INCREDIBLE DEDUCTIVE SKILLS, you realize that the CAPTAIN has been STABBED IN THE BACK.
+
+You have deduced this from the following clues:
+	The CAPTAIN is lying on their face,
+	There&#39;s a BIG BLOODY WOUND on their BACK.
+	
+Seems pretty open and shut, but you don&#39;t have any idea WHO did this.
+
+[[Think about stabbing people while staring the body]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] 
+
+(set: $stab = true)</tw-passagedata><tw-passagedata pid="11" name="POISONING" tags="" position="164,840" size="100,100">Looking at the CAPTAIN, it looks like they might just be ASLEEP. However, upon closer examination, you notice some TELL-TALE SIGNS. The CAPTAIN&#39;s lips have turned BLUE, and you detect the faint scent of BITTER ALMONDS, which can only mean that the CAPTAIN perished from CYANIDE.
+
+In SPACE.
+
+SPACE CYANIDE.
+
+[[Think about poison]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] 
+
+(set: $poison = true)</tw-passagedata><tw-passagedata pid="12" name="GETTING SHOT IN THE FACE WITH A LASER" tags="" position="148,1075" size="100,100">Yeah, that&#39;ll do it. Your general aversion to the body was cause by the fact your CAPTAIN was recently given a FRESH NEW LOOK, which can really only be described as A BURNT MESS FOR A FACE.
+
+[[Think about GUNS]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] 
+
+(set: $laser = true)</tw-passagedata><tw-passagedata pid="13" name="FIRST OFFICER" tags="" position="498,0" size="100,100">The FIRST OFFICER is the second in command of the ship. This means that they take over if/when the CAPTAIN is INCAPACITATED.
+
+OR MURDERED?
+
+Anyway, the FIRST OFFICER is a young, gung-ho, shoot-first-ask-questions-later sort of person. They make your job SO MUCH HARDER, because you are the one who has to deal with all the aliens that the FIRST OFFICER is insulting.
+
+[[INTERROGATE FIRST OFFICER]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] 
+
+</tw-passagedata><tw-passagedata pid="14" name="NAVIGATOR" tags="" position="521,108" size="100,100">The NAVIGATOR is the officer responsible for CHARTING THE COURSE OF THE SHIP. That is, they are the one who is steering the dang thing. You don&#39;t know a whole lot about the NAVIGATOR, but you heard a rumor that they were at the ACADEMY at the same time as the CAPTAIN, which is cool. They tend to hang out on the BRIDGE most of the time due to the fact that they have to keep pointing the ship in the right direction
+
+[[INTERROGATE NAVIGATOR]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="15" name="TRANSLATOR" tags="" position="896,403" size="100,100">The TRANSLATOR is a linguistic expert in charge of all communications with alien species. They also work closely with the CAPTAIN and serve as a sort of unofficial ambassador, as they not only have to speak the language, but be familiar with the customs of the culture so they don&#39;t accidentally start a way by making an OFF-COLOR joke about SOUP.
+
+It seems kind of STRESSFUL to you. The TRANSLATOR hangs out in the COMMON ROOM when they aren&#39;t working, probably so they can take a break from all the STRESS.
+
+[[INTERROGATE TRANSLATOR]] 
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="16" name="SCIENCE OFFICER" tags="" position="859,277" size="100,100">The SCIENCE OFFICER on board is kind of a weird person. They are incredibly SCIENTIFIC you suppose, but they AREN&#39;T GREAT WITH PEOPLE. You see them hanging around with the TRANSLATOR sometimes, but them mostly spend all their time in the LAB if they aren&#39;t sleeping.
+
+The SCIENTIST looks less SAD and more LOGICALLY VEXED about the CAPTAIN&#39;S DEATH.
+
+[[INTERROGATE SCIENCE OFFICER]] 
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="17" name="ENGINEER" tags="" position="698,198" size="100,100">The CHIEF ENGINEER is responsible for taking care of the ENGINES. They spend a lot of their time down in the ENGINE ROOM doing stuff to said ENGINES. You don&#39;t know jack about ENGINES so you mostly stay out of the way, but the ENGINEER seems like nice, hardworking person, someone you could have a SPACE BEER with.
+
+[[INTERROGATE ENGINEER]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="18" name="INTERROGATE FIRST OFFICER" tags="" position="691,0" size="100,100">The FIRST OFFICER is already sitting in the CAPTAIN&#39;S CHAIR on the BRIDGE. 
+
+Like come on. If you look up the definition of TOO SOON you get this exact picture.
+
+[[Ask the FIRST OFFICER about the CAPTAIN]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="19" name="Engine Room" tags="" position="142,165" size="100,100">The ENGINE ROOM is where the ship keeps it&#39;s ENGINES. It&#39;s not technically in the same area as the rest of this stuff, but the officers have a special passageway to it because the CHIEF ENGINEER has to go back and forth from the BRIDGE to the ENGINE ROOM all the time.
+
+It&#39;s very big and very loud, and you don&#39;t really understand how the engines work, but you are going to investigate anyway because JUSTICE doesn&#39;t rely on ENGINES.
+
+[[INVESTIGATE ENGINE ROOM]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="20" name="Think about poison" tags="" position="256,616" size="100,100">You think about poison for a bit.
+
+Poison isn&#39;t generally allowed on board the ship, for obvious reasons. However, you DO know how someone might CREATE poison.
+
+[[It&#39;s Time to Search for Some Illegal Substances, Baby|Lab]]
+
+[[Let&#39;s Have A Chat|INTERROGATE SCIENCE OFFICER]]</tw-passagedata><tw-passagedata pid="21" name="INTERROGATE SCIENCE OFFICER" tags="" position="849,118" size="100,100">You uhhhh, don&#39;t super like talking to the SCIENCE OFFICER. They make you uncomfortable, because all they really like to talk about is SCIENCE.
+
+You don&#39;t really know what to ask?
+
+[[Ask about the other CREW MEMBERS]]
+
+[[Ask about SCIENCE]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] 
+
+(if: $poison is true)[ [[Ask about POISON]] ]
+
+(if: $lab_evidence is true)[ [[CONFRONT SCIENCE OFFICER]] ]</tw-passagedata><tw-passagedata pid="22" name="Think about GUNS" tags="" position="267,1079" size="100,100">You think about GUNS. You have a GUN, and you love that thing. It shoots lasers, which is pretty standard in SPACE. The rest of the officers also have GUNS, which doesn&#39;t help your case at the moment.
+
+[[Examine the Body MORE]]
+
+[[Think about who on board REALLY LOVES GUNS]]</tw-passagedata><tw-passagedata pid="23" name="Examine the Body MORE" tags="" position="380,1079" size="100,100">You force yourself to get UP CLOSE AND PERSONAL with the CAPTAIN&#39;S NASTY BURNT FACE. You notice that the burn pattern doesn&#39;t match the damage that would be made with a standard GUN. The level of damage would have to be the result of a special modification designed to just RUIN SOMEONE&#39;S DAY.
+
+[[Who has this FANCY GUN?]]</tw-passagedata><tw-passagedata pid="24" name="Think about who on board REALLY LOVES GUNS" tags="" position="383,1193" size="100,100">You think about your other CREWMATES. Out of all of you, the only one who show any PASSION FOR GUNS (besides yourself) is the FIRST OFFICER. 
+
+DANG THEY LOVE GUNS.
+
+Maybe you could ask them about how many people they&#39;ve shot recently?
+
+[[INTERROGATE FIRST OFFICER]] 
+</tw-passagedata><tw-passagedata pid="25" name="Who has this FANCY GUN?" tags="" position="503,1078" size="100,100">The only person who love GUNS enough to shell out the cold hard cash for such a FANCY GUN is the FIRST OFFICER.
+
+And the good news is, they wouldn&#39;t leave such a nice GUN lying around, so maybe you can talk to them and see if they have the FANCY GUN with them.
+
+[[INTERROGATE FIRST OFFICER]] </tw-passagedata><tw-passagedata pid="26" name="INVESTIGATE LAB" tags="" position="279,269" size="100,100">You look around the LAB. There is a lot of very delicate SCIENTIFIC EQUIPMENT, none of which means anything to you. You do see what you can only thing of as GLASS SCIENCE BOTTLES, which fits your exact mental image of what should be in a LAB.
+
+(if: $poison is true)[ [[Look closer at bottles]] ] 
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="27" name="Look closer at bottles" tags="" position="409,285" size="100,100">There is a wide assortment of very impressive glassware in the lab, but you notice that there are some SUSPICIOUS BOTTLES that look like they have been recently used. You notice a small about of a MYSTERY SUBSTANCE in one of the BOTTLES. 
+
+You take a sniff, and WHOA. You catch a whiff of bitter almonds before getting a little dizzy.
+
+There&#39;s no doubt that this right here is the POISON that killed the CAPTAIN.
+
+[[Confront SCIENCE OFFICER|CONFRONT SCIENCE OFFICER]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]]
+
+(set: $lab_evidence = true)</tw-passagedata><tw-passagedata pid="28" name="Think about stabbing people while staring the body" tags="" position="273,947" size="100,100">Yikes! That took you to a real wierd brain space. However, you did notice a COUPLE OF ODD THINGS, which were:
+	
+	There isn&#39;t a whole lot of blood on the bed with the BODY.
+		
+	The wound seems to be an odd shape.
+	
+	
+That&#39;s some prime detective work! But observation is only part of the deduction process! Time for a DEDUCTION!
+
+[[The body was moved]]
+
+[[The murder weapon was something strange]]
+
+[[All of the above]]</tw-passagedata><tw-passagedata pid="29" name="Ask about the other CREW MEMBERS" tags="" position="1031,139" size="100,100">The SCIENCE OFFICER says that the other CREW MEMBERS are all very efficient at their respective JOBS. 
+
+[[Ask if anyone stands out]]</tw-passagedata><tw-passagedata pid="30" name="Ask about POISON" tags="" position="1031,21" size="100,100">You decide to ask the SCIENCE OFFICER about the POISON.
+
+[[&quot;Sooo, you hear about how the CAPTAIN died?]]
+</tw-passagedata><tw-passagedata pid="31" name="Ask about SCIENCE" tags="" position="1169,155" size="100,100">The SCIENCE OFFICER&#39;S eyes light up. They begin telling you about the reasearch they are doing in the LAB. You don&#39;t understand anything they are saying, but you nod encouragingly.
+
+[[They&#39;re still talking]]</tw-passagedata><tw-passagedata pid="32" name="&quot;Sooo, you hear about how the CAPTAIN died?" tags="" position="1160,24" size="100,100">The SCIENCE OFFICER looks at you.
+
+&quot;I heard about the CAPTAIN&#39;S passing, but not the method involved, no.&quot;
+
+The SCIENCE OFFICER continues to look at you. They do not break your gaze.
+
+[[Ask directly]]
+
+[[Ask not so directly]]</tw-passagedata><tw-passagedata pid="33" name="Ask directly" tags="" position="1307,117" size="100,100">&quot;Well I can&#39;t help but notice that poison isn&#39;t really allowed on board, so the only way to get any is to make some, say in the LAB? You notice anything off in there?&quot;
+
+The SCIENCE OFFICER&#39;S gaze shifts. 
+
+&quot;I have not noticed anything unusual...&quot;
+
+[[Pressure the SCIENCE OFFICER some more]]
+
+[[INVESTIGATE LAB]] </tw-passagedata><tw-passagedata pid="34" name="Ask not so directly" tags="" position="1305,0" size="100,100">You give the SCIENCE OFFICER an emotional speech about how you feel responsible for the CAPTAIN&#39;S DEATH, since it was YOUR JOB as SECURITY OFFICER to prevent dangerous things like POISON from getting on the ship. The SCIENCE OFFICER looks SUPREMELY UNCOMFORTABLE and looks away. You notice that they seem to be looking at the TRANSLATOR.
+
+[[Ask about the TRANSLATOR]]
+
+[[Ask the TRANSLATOR about the TRANSLATOR|INTERROGATE TRANSLATOR]]</tw-passagedata><tw-passagedata pid="35" name="Pressure the SCIENCE OFFICER some more" tags="" position="1433,132" size="100,100">You try and pressure the SCIENCE OFFICER into telling you more about the POISON.
+
+(if: $lab_evidence is true)[ [[CONFRONT SCIENCE OFFICER]] ]
+
+(if: $lab_evidence is not true)[ The SCIENCE OFFICER is stonewalling you. Unless you can PROVE SOMETHING, it doesn&#39;t seem like they will tell you anything.
+
+[[Go find some evidence |Let&#39;s Check Out this Spaceship, dude.]] ]</tw-passagedata><tw-passagedata pid="36" name="Ask about the TRANSLATOR" tags="" position="1457,12" size="100,100">You ask the SCIENCE OFFICER about the TRANSLATOR, and boy oh boy, does the SCIENCE OFFICER look UNCOMFORTABLE.
+
+The SCIENCE OFFICER tries to to ACT CHILL, but that&#39;s pretty much impossible.
+
+[[Put this fool on blast]]
+
+[[Ease up]]
+
+(set: $science_translator = true)</tw-passagedata><tw-passagedata pid="37" name="INTERROGATE TRANSLATOR" tags="" position="1028,409" size="100,100">The TRANSLATOR seems VERY SAD about the CAPTAIN&#39;S DEATH. 
+
+[[Ask about LANGUAGES]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] 
+
+(if: $science_translator is true)[ [[Ask about the SCIENCE OFFICER]] ]
+</tw-passagedata><tw-passagedata pid="38" name="INTERROGATE NAVIGATOR" tags="" position="528,234" size="100,100">The NAVIGATOR is a pretty quiet person. You heard a rumor that the NAVIGATOR and the CAPTAIN started at the ACADEMY at the same time came up through the ranks together, so you think that the NAVIGATOR might be taking the loss kind of hard.
+
+[[Ask about the CAPTAIN]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="39" name="INTERROGATE ENGINEER" tags="" position="698,348" size="100,100">The ENGINEER doesn&#39;t look like they&#39;re in the best of moods. When asked, the ENGINEER comments that obviously, they&#39;re upset about the CAPTAIN&#39;S DEATH, but they are also worried about spending so much time out of the ENGINE ROOM in case something goes wrong with the ENGINES.
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] 
+
+{(if: $stab is true)[ Kind of weird that that&#39;s the thing they&#39;re most worried about at the moment? [[INVESTIGATE ENGINE ROOM]] ]}
+</tw-passagedata><tw-passagedata pid="40" name="The body was moved" tags="" position="447,806" size="100,100">Obviously, if there isn&#39;t blood around the body where it was found, then the CAPTAIN must have been killed somewhere else and then moved here! 
+
+Was it to cover the killer&#39;s tracks? Or did the killer just not want to chill with a dead body?
+
+Who&#39;s to say!
+
+[[It was probably to cover their tracks, but let&#39;s move on and search for the real crime scene |Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="41" name="The murder weapon was something strange" tags="" position="316,791" size="100,100">Make sense that a strange murder weapon would leave a strange wound! The bigger question is, WHERE IS IT?
+
+Although, WHAT IS IT is also helpful, but you aren&#39;t a forensic expert, so you can only really SEARCH FOR CLUES.
+
+[[Time to search for the weapon|Let&#39;s Check Out this Spaceship, dude.]]</tw-passagedata><tw-passagedata pid="42" name="All of the above" tags="" position="453,953" size="100,100">Both of those things are equally true! The murder weapon was something unusual, and the body was moved after blood was spilled. By putting these facts together, your next course of action is clear:
+
+[[Time to find a crime scene and a murder weapon |Let&#39;s Check Out this Spaceship, dude.]]
+
+</tw-passagedata><tw-passagedata pid="43" name="INVESTIGATE GYM" tags="" position="333,430" size="100,100">The GYM has a lot of exercise machines, most of which you are familiar with. The FIRST OFFICER hangs out here all the time, but they tend to only use the weight machines.
+
+There&#39;s also a WEAPONS RACK, where you store extra GUNS and whatnot.
+
+(if: $gun is true)[ [[Examine GUNS]] ]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="44" name="INVESTIGATE COMMON ROOM" tags="" position="7,446" size="100,100">There&#39;s not a lot going on in this room, the two main things are the kitchen area, and the lounge area, which is mostly just couches.
+
+[[Look at kitchen]]
+
+[[Look at couches]]</tw-passagedata><tw-passagedata pid="45" name="INVESTIGATE ENGINE ROOM" tags="" position="275,156" size="100,100">There sure are ENGINES in here! It&#39;s a dark-ish room, occupied largely by the huge engines,and other assorted machines. It is  mostly lit by safety lights, with the exception of the WORK AREA that the engineers use, including the CHIEF ENGINEER. 
+
+(if: $stab is true)[ [[Examine WORK AREA]] ]
+
+[[Examine ENGINES]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="46" name="Put this fool on blast" tags="" position="1629,11" size="100,100">You go after the SCIENCE OFFICER regarding their relationship with the TRANSLATOR. You accuse them of having an affair. 
+
+Scandalous!
+
+The SCIENCE OFFICER actually slaps their hand over your mouth and drags you out of earshot of the TRANSLATOR. Once you won&#39;t be overheard, the SCIENCE OFFICER explains that they are in love with the TRANSLATOR, but the TRANSLATOR doesn&#39;t share those feelings.
+
+[[Be sympathetic]]
+
+[[Get over it, nerd]]
+</tw-passagedata><tw-passagedata pid="47" name="Ease up" tags="" position="1625,138" size="100,100">You gently pat the SCIENCE OFFICER on the arm, and tell them that we all get crushes sometimes.
+
+The SCIENCE OFFICER kind of glares at you, and tells you that IT&#39;S REAL LOVE.
+
+[[Ask if the TRANSLATOR feels the same way]]
+
+[[Ask the TRANSLATOR if they feel the same way|INTERROGATE TRANSLATOR]]
+
+</tw-passagedata><tw-passagedata pid="48" name="Be sympathetic" tags="" position="1427,263" size="100,100">The SCIENCE OFFICER seems more uncomfortable than anything else, but they do confide you that they suspect the REASON the TRANSLATOR isn&#39;t interested in them is that the TRANSLATOR had feelings for the CAPTAIN.
+
+They then realize that this is a SUPER SUSPICIOUS thing to say, and refuse to talk to you about anything else.
+
+[[Confirm this with the TRANSLATOR|INTERROGATE TRANSLATOR]]
+
+[[Go look for EVIDENCE|INVESTIGATE LAB]]</tw-passagedata><tw-passagedata pid="49" name="Get over it, nerd" tags="" position="1568,278" size="100,100">The SCIENCE OFFICER scowls at you.
+
+This coversation seems OVER.
+
+[[Ask the TRANSLATOR about all this|INTERROGATE TRANSLATOR]]
+
+[[Look for some EVIDENCE|INVESTIGATE LAB]]</tw-passagedata><tw-passagedata pid="50" name="Ask if the TRANSLATOR feels the same way" tags="" position="1719,276" size="100,100">It is clear from the reaction of the SCIENCE OFFICER that the TRANSLATOR is less than enthusiastic about this relationship.
+
+Upon further prodding, the SCIENCE OFFICER reveals that they suspect the TRANSLATOR had feelings for the CAPTAIN.
+
+The SCIENCE OFFICER realizes this is kind of INCRIMINATING, and shuts up.
+
+[[INTERROGATE TRANSLATOR]] 
+
+[[Look for EVIDENCE|INVESTIGATE LAB]]
+
+</tw-passagedata><tw-passagedata pid="51" name="CONFRONT SCIENCE OFFICER" tags="" position="1773,10" size="100,100">You CONFRONT the SCIENCE OFFICER about the POISON you found in the LAB.
+
+You EXPLAIN how they are the ONLY PERSON who had the means to make poison, and that you found the POISON in the LAB.
+
+The SCIENCE OFFICER looks very guilty.
+
+[[Ask the SCIENCE OFFICER about MOTIVE]]</tw-passagedata><tw-passagedata pid="52" name="Ask about the SCIENCE OFFICER" tags="" position="1036,525" size="100,100">The TRANSLATOR sighs and rolls their eyes. They tell you that the SCIENCE OFFICER has been pestering them for ages, but they just aren&#39;t interested. 
+
+The TRANSLATOR says that they were interested in someone else, then abruptly cuts themselves off.
+
+[[Ask if they were interested in the CAPTAIN]]
+
+[[Say that you are flattered, but you only think of them as a collegue]]
+</tw-passagedata><tw-passagedata pid="53" name="Ask if anyone stands out" tags="" position="1150,290" size="100,100">The SCIENCE OFFICER comments that the CAPTAIN was a good friend of theirs, and often sought them out to have conversations about non-ship related activities and have MEALS together.
+
+You can tell that the if the SCIENCE OFFICER wasn&#39;t strictly about LOGIC and SCIENCE, they would probably be pretty upset about the CAPTAIN&#39;S DEATH
+
+[[Ask about something else |INTERROGATE SCIENCE OFFICER]]</tw-passagedata><tw-passagedata pid="54" name="They&#39;re still talking" tags="" position="1280,305" size="100,100">The SCIENCE OFFICER continues talking excitedly about SCIENCE.
+
+[[Still talking]]
+</tw-passagedata><tw-passagedata pid="55" name="Still talking" tags="" position="1285,435" size="100,100">The SCIENCE OFFICER continues talking about SCIENCE
+
+[[Oh god, the agony]]</tw-passagedata><tw-passagedata pid="56" name="Oh god, the agony" tags="" position="1399,436" size="100,100">The SCIENCE OFFICER is not going to stop talking about SCIENCE unless you do something.
+
+[[Change the subject|INTERROGATE SCIENCE OFFICER]]</tw-passagedata><tw-passagedata pid="57" name="Ask if they were interested in the CAPTAIN" tags="" position="961,675" size="100,100">The TRANSLATOR tears up. They confirm that they had ROMANTIC NOTIONS about the CAPTAIN, and tells you that they wish they had more TIME to establish a RELATIONSHIP. The TRANSLATOR then mourns what could have been in a DRAMATIC FASHION.
+
+[[Ask if the CAPTAIN was interested in the TRANSLATOR]]</tw-passagedata><tw-passagedata pid="58" name="Say that you are flattered, but you only think of them as a collegue" tags="" position="1111,675" size="100,100">The TRANSLATOR scowls at you. They haughtly explain that they have no interest in YOU, they were talking about the CAPTAIN. You get the feeling that the TRANSLATOR is trying very hard to insult you without actually insulting you.
+
+[[Ask if the CAPTAIN was interested in the TRANSLATOR]]
+
+[[Ask about something else|INTERROGATE TRANSLATOR]]</tw-passagedata><tw-passagedata pid="59" name="Ask if the CAPTAIN was interested in the TRANSLATOR" tags="" position="1034,799" size="100,100">You appear to have hit something of a touchy subject. The TRANSLATOR doesn&#39;t exactly say that the CAPTAIN was uninterested outright, but it&#39;s clear that the feeling was not MUTUAL.
+
+[[Ask if the CAPTAIN was interested in someone else]]</tw-passagedata><tw-passagedata pid="60" name="Ask if the CAPTAIN was interested in someone else" tags="" position="1034,949" size="100,100">The TRANSLATOR scowls. They say that they don&#39;t have any proof, but they say that the CAPTAIN would spend a lot of their free time with the SCIENCE OFFICER.
+
+The TRANSLATOR is clearly not thrilled that they weren&#39;t getting that personal time.
+
+[[INTERROGATE SCIENCE OFFICER]] 
+
+[[Talk to someone else|Let&#39;s Meet the Crew]]
+
+[[Ask about something else|INTERROGATE TRANSLATOR]] 
+
+(set: $cap_science = true)</tw-passagedata><tw-passagedata pid="61" name="Ask about LANGUAGES" tags="" position="888,520" size="100,100">The TRANSLATOR looks at you blankly. 
+
+&quot;Someone just died, and you wanna talk about languages? Aren&#39;t you the one supposed to be solving the MURDER?&quot;
+
+Thus admonished, you decided to:
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] 
+
+[[Ask about something else|INTERROGATE TRANSLATOR]]</tw-passagedata><tw-passagedata pid="62" name="Look at kitchen" tags="" position="0,596" size="100,100">The kitchen area is rather small. You don&#39;t do a lot of cooking, so you aren&#39;t too familar with a lot of the equipment, but you do occasionally keep snacks in the fridge.
+
+(if: $cap_science is true and $poison is true)[ You notice that there are a few stored meals with labels on them that are pretty askew [[Examine leftovers]] ]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="63" name="Look at couches" tags="" position="137,562" size="100,100">There are some very comfortable couches. You take a seat on one of them to investigate just how comfortable they are.
+
+...
+
+...
+
+...
+
+Super comfortable! Great investigating!
+
+[[Look around some more|INVESTIGATE COMMON ROOM]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="64" name="Examine leftovers" tags="" position="7,721" size="100,100">Two SPACE TUPPERWARE containers look like they were replaced kind of carelessly. You notice that they have names on the. One says CAPTAIN and the other says SCIENCE OFFICER. You think about how the CAPTAIN was killed by POISON. 
+
+You don&#39;t think it was IN THE FOOD?
+
+You examine the CAPTAIN&#39;S LEFTOVERS, but you don&#39;t find any poison.
+
+Weird?
+
+[[Examine SCIENCE OFFICER&#39;S LEFTOVERS]]
+</tw-passagedata><tw-passagedata pid="65" name="Examine SCIENCE OFFICER&#39;S LEFTOVERS" tags="" position="129,701" size="100,100">Whoa! Now THIS is poisoned! It seems that someone has poisoned the SCIENCE OFFICERS FOOD, not the CAPTAINS? Which means that the intended victim was the SCIENCE OFFICER!
+
+This investigation has to switch tracks! Who could have the motive to kill the SCIENCE OFFICER?
+
+[[Could it be...JEALOUSY?|CONFRONT TRANSLATOR]]</tw-passagedata><tw-passagedata pid="66" name="CONFRONT TRANSLATOR" tags="" position="725,506" size="100,100">You confront the TRANSLATOR about the POISONED MEALS.
+
+The TRANSLATOR claims that they would NEVER do anything that would hurt the CAPTAIN, everyone knew that they were in LOVE with the CAPTAIN\
+
+[[Bring out the EVIDENCE]]</tw-passagedata><tw-passagedata pid="67" name="INVESTIGATE BRIDGE" tags="" position="390,153" size="100,100">You look around the BRIDGE, which is where the rest of the CREW is staying while you are INVESTIGATING. This makes searching this particular area rather difficult, but you make the rounds of each CREW member&#39;s STATION.
+
+You don&#39;t notice anything in particular out of place, but the NAVIGATOR did twitch a little when you passed the STORAGE CLOSET.
+
+[[Examine STORAGE CLOSET]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="68" name="Ask the SCIENCE OFFICER about MOTIVE" tags="" position="1906,7" size="100,100">The SCIENCE OFFICER breaks down weeping. They terafully explain that all they wanted was for the TRANSLATOR to love them, but that the TRANSLATOR only had eyes for the CAPTAIN. So the LOGICAL SOLUTION was to eliminate the CAPTAIN so that the TRANSLATOR would fall in love with them instead. They made the POISON in the LAB, then snuck the POISON into the CAPTAIN&#39;S DINNER. The SCIENCE OFFICER regets killing their FRIEND, but they DID IT FOR LOVE.
+
+[[Cool motive, still murder]]
+</tw-passagedata><tw-passagedata pid="69" name="Cool motive, still murder" tags="" position="2021,7" size="100,100">You arrest the SCIENCE OFFICER and lock them in a STORAGE CLOSET until you return to your home planet so you can put them on trial. The TRANSLATOR is very upset with the events, as they were stuck in the middle of this whole affair. You have to keep them away from the SCIENCE OFFICER so you don&#39;t end up with a second murder on your hands.
+
+Congratulations! You solved the murder!
+
+[[Wanna solve it again?|Start]]</tw-passagedata><tw-passagedata pid="70" name="Bring out the EVIDENCE" tags="" position="725,656" size="100,100">You show the TRANSLATOR the POISONED LEFTOVERS. You explain, in a dramatic fashion, that the CAPTAIN and the SCIENCE OFFICER were close friends, and they often had meals together. This meant that they sometimes SWAPPED FOOD. So, the POISON was actually in the SCIENCE OFFICER&#39;S FOOD, not the CAPTAIN&#39;S. 
+
+The TRANSLATOR wanted to kill the SCIENCE OFFICER so they could get closer to the CAPTAIN, but unfortunately, the wrong victim ate the poisoned food.
+
+[[But what about the POISON?]]</tw-passagedata><tw-passagedata pid="71" name="But what about the POISON?" tags="" position="726,803" size="100,100">The TRANSLATOR breaks down. The SCIENCE OFFICER also breaks down. The TRANSLATOR had asked the SCIENCE OFFICER to make the POISON, and since the SCIENCE OFFICER was in love with the TRANSLATOR, they agreed without asking any questions.
+
+Wow, imagine making your own murder weapon, only to have it kill someone else by mistake! That&#39;s twisted!
+
+There are whole lot of people crying in here.
+
+[[Resolve the situation]]</tw-passagedata><tw-passagedata pid="72" name="Resolve the situation" tags="" position="725,956" size="100,100">You arrest the TRANSLATOR for murder, and use a STORAGE CLOSET as a makeshift cell until you reach your home base so they can be handed over to the authorities.
+
+This whole mess was the result of a love triangle! You hope someone rewrites the HR guidelines on crew relationships so nothing like this can happen again.
+
+Congratulations! You solved the case!
+
+[[Wanna solve it again?|Start]]</tw-passagedata><tw-passagedata pid="73" name="Ask the FIRST OFFICER about the CAPTAIN" tags="" position="816,0" size="100,100">The FIRST OFFICER seems to brush off the question. They say that they respected the CAPTAIN, of course, but the past was in the past, and it&#39;s time to look towards the FUTURE.
+
+Wow, this guy SUCKS.
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] 
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="74" name="Examine GUNS" tags="" position="732,1114" size="100,100">The GUN RACK has a lot of COOL GUNS that are for general use, and each crew member has their own little section that has space for any of their PERSONAL WEAPONS.
+
+[[Examine FIRST OFFICER section]]
+
+[[Examine SCIENCE OFFICER section]]
+
+[[Examine TRANSLATOR section]]
+
+[[Examine NAVIGATOR section]]
+
+[[Examine ENGINEER section]]
+
+[[Examine SECURITY OFFICER section]]
+
+[[Examine CAPTAIN section]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="75" name="Examine FIRST OFFICER section" tags="" position="625,1298" size="100,100">The FIRST OFFICER loves them some GUNS. They have a whole collection, and you aren&#39;t even jealous.
+
+Well maybe a little bit.
+
+As you look over all the cool guns the FIRST OFFICER has, you notice a HIGH POWERED LASER RIFLE that is slightly askew. 
+
+[[Examine HIGH POWERED LASER RIFLE]]</tw-passagedata><tw-passagedata pid="76" name="Examine SCIENCE OFFICER section" tags="" position="747,1300" size="100,100">The SCIENCE OFFICER doesn&#39;t have a lot of GUNS, but the GUNS they do have are something else. They have a freeze ray, a heat ray, and something you THINK stops time but you&#39;ve never found the courage to ask.
+
+There doesn&#39;t seem to anything that could blast someone&#39;s face off though.
+
+[[Look at some other GUNS|Examine GUNS]]</tw-passagedata><tw-passagedata pid="77" name="Examine TRANSLATOR section" tags="" position="865,1297" size="100,100">The TRANSLATOR is a strictly diplomatic job, so the only gun they have is the standard OFFICER PISTOL, which is almost always set to STUN.
+
+[[Look at some other GUNS|Examine GUNS]]</tw-passagedata><tw-passagedata pid="78" name="Examine NAVIGATOR section" tags="" position="502,1302" size="100,100">The NAVIGATOR isn&#39;t really a big GUN person, as far as you can tell. They have a standard OFFICER PISTOL, which is generally set to STUN. Nothing much to see here.
+
+[[Look at some other GUNS|Examine GUNS]]</tw-passagedata><tw-passagedata pid="79" name="Examine ENGINEER section" tags="" position="983,1297" size="100,100">The ENGINEER doesn&#39;t have a lot of regular GUNS, but they did move a much of outdated engineering equipment up here for some reason.
+
+There seems to be a welding torch, but as a PROFESSIONAL, you know the difference between someone getting the face welded off and getting the face blasted off.
+
+[[Look at some other GUNS|Examine GUNS]]</tw-passagedata><tw-passagedata pid="80" name="Examine SECURITY OFFICER section" tags="" position="1215,1299" size="100,100">These are your guns! You have a pretty tidy collection, since you occasionally get to keep confiscated weapons from people entering the ship. 
+
+Everything is exactly where you left it, and you don&#39;t have any face-melting guns in the first place.
+
+[[Look at some other GUNS|Examine GUNS]]</tw-passagedata><tw-passagedata pid="81" name="Examine CAPTAIN section" tags="" position="1103,1300" size="100,100">Looking at the CAPTAIN&#39;s section is a little bittersweet. They had a lot of pretty neat GUNS, but since the CAPTAIN was such a nice person, they are all set permentantly to STUN.
+
+Nothing seems out of place here.
+
+[[Look at some other GUNS|Examine GUNS]]</tw-passagedata><tw-passagedata pid="82" name="Examine HIGH POWERED LASER RIFLE" tags="" position="625,1448" size="100,100">Now THIS is a gun that could melt someone&#39;s face. It&#39;s incredibly high-tech, it basically has a computer built into it. It can track who&#39;s using it, when it was fired, even the coordinates where it was fired!
+
+WAIT A MINUTE
+
+[[Check GUN LOG]]</tw-passagedata><tw-passagedata pid="83" name="Check GUN LOG" tags="" position="625,1598" size="100,100">Wow! The HIGH POWERED LASER RIFLE was last fired LAST NIGHT by the FIRST OFFICER in the BUNKS.
+
+The FIRST OFFICER is like,SO BAD at MURDER.
+
+[[CONFRONT FIRST OFFICER]]</tw-passagedata><tw-passagedata pid="84" name="CONFRONT FIRST OFFICER" tags="" position="625,1748" size="100,100">You bring the HIGH POWERED LASER RIFLE to the BRIDGE and point it directly at the FIRST OFFICER.
+
+&quot;Start talking&quot;
+
+The FIRST OFFICER immediately confesses.
+
+They killed the CAPTAIN in order to get them out of the way so they could take over the SHIP. You arrest the FIRST OFFICER and lock him a makeshift jail cell that is normally a STORAGE CLOSET.
+
+You are really glad the FIRST OFFICER won&#39;t be the new CAPTAIN, since even besides being a murderer, they seem REAL DUMB.
+
+Congratualtions! You solved the case!
+
+[[Wanna solve it again?|Start]]</tw-passagedata><tw-passagedata pid="85" name="Ask about the CAPTAIN" tags="" position="515,381" size="100,100">You ask the NAVIGATOR about their history with the CAPTAIN.
+
+The NAVIGATOR confirms the rumors. In fact, the CAPTAIN and the NAVIGATOR go back further than anyone knew. They were, in fact, CHILDHOOD FRIENDS.
+
+[[Ask if the CAPTAIN had any enemies]]
+
+[[Ask how they are doing]]</tw-passagedata><tw-passagedata pid="86" name="Ask if the CAPTAIN had any enemies" tags="" position="440,531" size="100,100">The NAVIGATOR seems to seriously consider it, but they can&#39;t seem to come up with anything. They do mention that the last time they saw the CAPTAIN, they had been going to the ENGINE ROOM to talk to the ENGINEER.
+
+[[INTERROGATE ENGINEER]] 
+
+[[Investigate Engine Room|Engine Room]]
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="87" name="Ask how they are doing" tags="" position="590,531" size="100,100">The NAVIGATOR sighs. They wryly say that they&#39;ve obviously been better, they know they have to continue their duties. 
+
+After a moment, they look out into space and say that they always knew the CAPTAIN would eventually leave someday, they had always assumed that it would be due to the CAPTAIN getting promoted beyond them.
+
+They sigh.
+
+[[Talk to someone else|Let&#39;s Meet the Crew]] </tw-passagedata><tw-passagedata pid="88" name="Examine WORK AREA" tags="" position="525,662" size="100,100">This is the ENGINEERS WORK AREA. It consists mainly of a work bench with a large array of tools. There are a few tools you recognize, like wrenchs, screwdrivers, etc., but beyond that there are a lot of power tools that you don&#39;t really understand. 
+
+You do notice a pile of scrap metal on the workbench, and on further investigation, it seems to have been knocked over at some point.
+
+[[Investigate metal]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="89" name="Examine ENGINES" tags="" position="378,653" size="100,100">The ENGINES are huge spinning machines that make a lot of noise. You wonder how anyone gets any work done down here. You don&#39;t know enough about ENGINES to know if there&#39;s anything wrong with them, but the ship is still moving and has power, so you assume everything is good.
+
+You do notice some crates that are just kind of lying around, which you note as a safety hazard and resolve to bring it up to the ENGINEER later.
+
+[[Examine something else|INVESTIGATE ENGINE ROOM]]
+
+[[Go somewhere else|Let&#39;s Check Out this Spaceship, dude.]] </tw-passagedata><tw-passagedata pid="90" name="Investigate metal" tags="" position="577,812" size="100,100">The pile of scrap metal is probably from some engineering project that you can&#39;t and won&#39;t understand anytime soon.
+
+What you do understand is that the metal seems to have been disturbed pretty recently, based on dust patterns, and that there are traces of BLOOD on some of the metal.
+
+Actually, looking at the floor under the workbench, there are some pretty clear traces of BLOOD, like someone tried to clean up a large amount of BLOOD, but missed some due to the darkness in the ENGINE ROOM.
+
+There&#39;s really only one way to go from here.
+
+[[CONFRONT ENGINEER]]</tw-passagedata><tw-passagedata pid="91" name="CONFRONT ENGINEER" tags="" position="131,1255" size="100,100">You head back to the BRIDGE and confront the ENGINEER about the BLOOD in the ENGINE ROOM.
+
+The ENGINEER looks a little nervous, but they hold their ground. They ask what possible reason they could have for killing the CAPTAIN.
+
+[[Mention the ODD CRATES in the ENGINE ROOM]]</tw-passagedata><tw-passagedata pid="92" name="Mention the ODD CRATES in the ENGINE ROOM" tags="" position="22,1363" size="100,100">The ENGINEER flinches when you mention the CRATES. Sensing you are on to something, you suggest that you head down to the ENGINE ROOM and take a closer look.
+
+The ENGINEER sighs. They shake their head, defeated. They explain that the CRATES are full of certain ILLICIT MATERIALS that the ENGINEER had agreed to smuggle for some interstellar crime syndicate.
+
+[[Ask why the ENGINEER would do such a thing]]</tw-passagedata><tw-passagedata pid="93" name="Ask why the ENGINEER would do such a thing" tags="" position="22,1513" size="100,100">The ENGINEER smiles sadly. They explain that the last time they were on base, their son had contacted them looking for money, as he had lost all his money gambling and was now deeply in debt. In order to help, the ENGINEER agreed to smuggle the CRATES to pay off the debt.
+
+[[But why did they murder the CAPTAIN??]]</tw-passagedata><tw-passagedata pid="94" name="But why did they murder the CAPTAIN??" tags="" position="22,1663" size="100,100">The ENGINEER looks down, ashamed. The CAPTAIN had found about the SMUGGLING, and had gone down to the ENGINE ROOM to confront the ENGINEER about it. The ENGINEER begged the CAPTAIN to understand, but the CAPTAIN had resolved to report this incident to the proper authorities. The ENGINEER had panicked, and stabbed the CAPTAIN with a piece of scrap metal from the workbench before dragging the body back to the BUNKS.
+
+THe ENGINEER agrees to come quietly, and you arrest them and put them in a makeshift holding cell (a STORAGE CLOSET) until you reach the nearest base. The ENGINEER says that their only regret is that they weren&#39;t able to save their son, and you resolve to get the son into protective custody before the gangs find out their smuggling racket has failed.
+
+Congratulations! You solved the case!
+
+[[Wanna solve it again?|Start]]</tw-passagedata><tw-passagedata pid="95" name="Examine STORAGE CLOSET" tags="" position="842,639" size="100,100">The STORAGE CLOSET is a closet where you STORE THINGS. It&#39;s generally used to keep spare uniforms, and on occasion, snacks. At first glance, you don&#39;t see anything wrong with the clean stacks of uniforms, but under close inspection, you see that a disheveled uniform has been stuffed between two of the clean, folded uniforms.
+
+Upon pulling the uniform free, you see the reason it was stuffed in this storage closet is that this uniform is covered in BLOOD.
+
+Also on this uniform is the name of its owner, which means you have your CULPRIT
+
+[[CONFRONT NAVIGATOR]]</tw-passagedata><tw-passagedata pid="96" name="CONFRONT NAVIGATOR" tags="" position="842,789" size="100,100">You pull the BLOODY UNIFORM out of the closet, and hold it out for the rest of the CREW to see. The NAVIGATOR instantly recognizes their own uniform, and begins to try and back towards the exit.
+
+You toss the uniform aside and pull out your GUN. 
+
+[[Ask the NAVIGATOR why they did it]]</tw-passagedata><tw-passagedata pid="97" name="Ask the NAVIGATOR why they did it" tags="" position="842,939" size="100,100">The NAVIGATOR scoffs. They explain how they have known the CAPTAIN since they were children, and then through the ACADEMY and on through the ranks until they were both assigned to this SHIP. 
+
+[[Sounds fine so far, get to the point]]</tw-passagedata><tw-passagedata pid="98" name="Sounds fine so far, get to the point" tags="" position="917,1064" size="100,100">The NAVIGATOR glares at you for interrupting. They launch into a tangent about how sick they were of the CAPTAIN and their GRANDSTANDING. At every turn, the CAPTAIN was always the one who stood out, who got promoted, and got all the GLORY.
+
+The NAVIGATOR says that they got sick of always playing second banana to the CAPTAIN, and finally snapped. They called the CAPTAIN to the BRIDGE to &quot;have a friendly chat&quot;, and then stabbed them in the back before dumping the body and their bloody uniform.
+
+[[Arrest this jealous weirdo]]</tw-passagedata><tw-passagedata pid="99" name="Arrest this jealous weirdo" tags="" position="1070,1085" size="100,100">You arrest the NAVIGATOR, who has started hysterically laughing in a not very reassuring way. You lock them in a makeshift holding cell, which ended up being just the same STORAGE CLOSET they hid the evidence in.
+
+Congratulations! You solved the case!
+
+[[Wanna solve it again?|Start]]</tw-passagedata></tw-storydata>
